@@ -27,7 +27,7 @@ In some code, instead of the above, you might see:
 
 which is an alternate approach. Is there a difference between these? The answer is.. yes. Using the array notation 4 bytes of storage in the static memory block are taken up, one for each character and one for the terminating nul character. But, in the pointer notation the same 4 bytes required, **plus** N bytes to store the pointer variable **my\_name** (where N depends on the system but is usually a minimum of 2 bytes and can be 4 or more).
 
-In the array notation, **my\_name** is short for **&myname\[0\]** which is the address of the first element of the array. Since the location of the array is fixed during run time, this is a constant (not a variable). In the pointer notation **my\_name** is a variable. As to which is the **better** method, that depends on what you are going to do within the rest of the program.
+In the array notation, **my\_name** is short for **&my_name\[0\]** which is the address of the first element of the array. Since the location of the array is fixed during run time, this is a constant (not a variable). In the pointer notation **my\_name** is a variable. As to which is the **better** method, that depends on what you are going to do within the rest of the program.
 
 Let's now go one step further and consider what happens if each of these declarations are done within a function as opposed to globally outside the bounds of any function.
 
