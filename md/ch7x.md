@@ -31,7 +31,7 @@ To understand more fully what is going on, let us replace
 with **X** as in:
 
     
-        *(X + col)
+        *(X + col)  /* X is the base address, '+ col' means a offest of col. */
     
 
 Now, from this we see that **X** is like a pointer since the expression is de-referenced and we know that **col** is an integer. Here the arithmetic being used is of a special kind called "pointer arithmetic" is being used. That means that, since we are talking about an integer array, the address pointed to by (i.e. value of) **X + col + 1** must be greater than the address **X + col** by and amount equal to **sizeof(int)**.
