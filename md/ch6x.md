@@ -102,7 +102,7 @@ My goal in the above is to illustrate how memory is laid out for 2 dimensional a
 Now, the compiler knows how many columns are present in the array so it can interpret **multi + 1** as the address of the 'a' in the 2nd row above. That is, it adds 10, the number of columns, to get this location. If we were dealing with integers and an array with the same dimension the compiler would add **10\*sizeof(int)** which, on my machine, would be 20. Thus, the address of the **9** in the 4th row above would be **&multi\[3\]\[0\]** or **\*(multi + 3)** in pointer notation. To get to the content of the 2nd element in the 4th row we add 1 to this address and dereference the result as in
 
     
-        *(*(multi + 3) + 1)
+        *(*(multi + 3) + 1)   /*Can we take * as an operator as a fetch and & as to write?*/
     
 
 With a little thought we can see that:
